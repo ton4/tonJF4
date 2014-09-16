@@ -1,0 +1,46 @@
+****************************************************
+Opis gry
+
+Typ: Zręcznościowa (w zamiarze multiplayer)
+Streszczenie: Gracze zdobywają punkty przez skakanie po polach planszy i zbieranie odpowiednich przemiotów.
+Postacie: Aniołki i diabełki.
+Plansza: Różne rodzaje:
+	- dżungla
+	- miasto
+	- statek
+System punktacji:
+	- za każde zamalowane pole gracz dostaje jeden punkt
+	- za każde pięć pól bonusowe dwa punkty
+	- za wykonanie odpowiedniej sekwencji w grze premia punktowa
+	- za wykonanie zadania premia punktowa
+
+****************************************************
+Struktura mechanizmu gry
+
+1. Silnik graficzny.
+	
+	GameEngine[ object ]
+	
+	- Obsługa tablicy obiektów.
+	- Obsługa stanu gry (włączona, wyłączona)
+	- Obsługa etapów gry
+	- Interfejs gry
+
+2. Klasy obiektów:
+	
+	- Sprite
+	- Bonus
+	- Team
+	- Weapon
+	- Board
+	- Field
+	
+	Każda klasa, której obiekty mają się poruszać po scenie musi mieć zaimplementowane funkcje:
+	
+	- draw
+	- update
+	- remove
+	
+	oraz pola:
+	
+	- id
